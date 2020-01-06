@@ -9,8 +9,8 @@
 
 int torus(int ac, char **av)
 {
-    int *coef[5];
-    struct coef_t;
+    float cf[5];
+    coef_t coef;
     
     if (error_handling(ac, av) == 1)
         return (84);
@@ -18,12 +18,17 @@ int torus(int ac, char **av)
         display_help();
         return (0);
     }
-    for (int i = 3, j = 0; i != ac -1; i++, j++)
-        coef[j] = atof(av[i]);
-    coef_t.a0 = coef[0];
-    coef_t.a1 = coef[1];
-    coef_t.a2 = coef[2];
-    coef_t.a3 = coef[3];
-    coef_t.a4 = coef[4];
+    for (int i = 2, j = 0; i != ac - 1; i++, j++)
+        cf[j] = atof(av[i]);
+    coef.a0 = cf[0];
+    coef.a1 = cf[1];
+    coef.a2 = cf[2];
+    coef.a3 = cf[3];
+    coef.a4 = cf[4];
+    printf("a0 = %f\n", coef.a0);
+    printf("a1 = %f\n", coef.a1);
+    printf("a2 = %f\n", coef.a2);
+    printf("a3 = %f\n", coef.a3);
+    printf("a4 = %f\n", coef.a4);
     return (0);
 }
