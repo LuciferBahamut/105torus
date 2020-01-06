@@ -22,4 +22,6 @@ int error_handling(int ac, char **av)
         }
     if (av[1][0] != '1' && av[1][0] != '2' && av[1][0] != '3')
         return (1);
+    if (av[7][0] == '-')
+        return (1);
 }
