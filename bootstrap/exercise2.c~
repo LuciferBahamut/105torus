@@ -1,0 +1,20 @@
+/*
+** EPITECH PROJECT, 2020
+** exercise n
+** File description:
+** It's a Boots Trap
+*/
+
+/*
+f(x) = 4ax³ + 3bx² + 2cx + d;
+f'(x)= 12ax² + 6bx + 2c;
+*/
+
+float FPrime(float *F, float x)
+{
+    float A = pow(12 * F[0] * x, 2);
+    float B = 6 * F[1] * x;
+    float C = 2 * F[2];
+    float out = A + B + C;
+    return(out);
+}
