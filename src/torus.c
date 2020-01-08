@@ -11,7 +11,7 @@ int torus(int ac, char **av)
 {
     float *cf = malloc(5 * sizeof(float));
     coef_t *coef = malloc(5 * sizeof(float));
-    printf("HEY\n");
+
     if (error_handling(ac, av) == 1) {
         free(cf);
         return (84);
@@ -20,10 +20,8 @@ int torus(int ac, char **av)
         display_help();
         return (0);
     }
-    printf("HEY\n");
     for (int i = 0, j = 2; j != ac - 1; i++, j++)
         cf[i] = atof(av[j]);
-    printf("HEY\n");
     coef->a0 = cf[0];
     coef->a1 = cf[1];
     coef->a2 = cf[2];
