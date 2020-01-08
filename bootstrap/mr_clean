@@ -1,7 +1,0 @@
-#!/bin/bash
-clear
-ls
-find -type f -name "*~" -delete -o -type f -name "a.out" -delete -o -type f -name "#*#" -delete -o -type f -name "*.o" -delete
-sleep 2
-clear
-ls
