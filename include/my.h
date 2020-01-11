@@ -13,11 +13,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define ARGNBR "We need 7 parameters, try -h for help\n"
-#define BADARG "All parameters must be numbers\n"
-#define BADOPT "The opt parameter must be an integer beetween 1 and 3\n"
-#define BADN   "The n parameter must be a positive int\n"
-
 typedef struct coef
 {
     float a0;
