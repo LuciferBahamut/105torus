@@ -24,7 +24,6 @@ all	:	$(OBJ)
 		$(CC) $(DEFLAGS) -o $(NAME) $(OBJ) $(CPPFLAGS)
 
 clean	:
-		clear
 		rm -f $(OBJ)
 
 fclean	:	clean
