@@ -7,6 +7,31 @@
 
 #include "my.h"
 
+void check_opt(coef_t *coef)
+{
+    switch(coef->opt) {
+    case 1 : bisection_m(coef);
+        break;
+    case 2 : newton_m(coef);
+        break;
+    case 3 : secant_m(coef);
+        break;
+    }
+}
+
+coef_t *fill_struct(coef_t *coef, float *cf, char **av)
+{
+    coef->opt = atoi(av[1]);
+    coef->a1 = cf[0];
+    coef->a2 = cf[1];
+    coef->a3 = cf[2];
+    coef->a4 = cf[3];
+    coef->a5 = cf[4];
+    coef->prec = atoi(av[7]);
+    free(cf);
+    return (coef);
+}
+
 int torus(int ac, char **av)
 {
     float *cf = malloc(5 * sizeof(float));
@@ -22,15 +47,8 @@ int torus(int ac, char **av)
     }
     for (int i = 0, j = 2; j != ac - 1; i++, j++)
         cf[i] = atof(av[j]);
-    coef->a0 = cf[0];
-    coef->a1 = cf[1];
-    coef->a2 = cf[2];
-    coef->a3 = cf[3];
-    coef->a4 = cf[4];
-    printf("a0 = %f\n", coef->a0);
-    printf("a1 = %f\n", coef->a1);
-    printf("a2 = %f\n", coef->a2);
-    printf("a3 = %f\n", coef->a3);
-    printf("a4 = %f\n", coef->a4);
+    coef = fill_struct(coef, cf, av);
+    check_opt(coef);
+    free(coef);
     return (0);
 }
