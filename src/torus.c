@@ -24,11 +24,11 @@ coef_t *fill_struct(coef_t *coef, float *cf, char **av)
     int temp = atoi(av[7]);
 
     coef->opt = atoi(av[1]);
-    coef->a1 = cf[0];
-    coef->a2 = cf[1];
-    coef->a3 = cf[2];
-    coef->a4 = cf[3];
-    coef->a5 = cf[4];
+    coef->a0 = cf[0];
+    coef->a1 = cf[1];
+    coef->a2 = cf[2];
+    coef->a3 = cf[3];
+    coef->a4 = cf[4];
     coef->prec = pow(10, -temp);
     free(cf);
     return (coef);
