@@ -21,13 +21,15 @@ void check_opt(coef_t *coef)
 
 coef_t *fill_struct(coef_t *coef, float *cf, char **av)
 {
+    int temp = atoi(av[7]);
+
     coef->opt = atoi(av[1]);
     coef->a1 = cf[0];
     coef->a2 = cf[1];
     coef->a3 = cf[2];
     coef->a4 = cf[3];
     coef->a5 = cf[4];
-    coef->prec = atoi(av[7]);
+    coef->prec = pow(10, -temp);
     free(cf);
     return (coef);
 }
@@ -35,7 +37,7 @@ coef_t *fill_struct(coef_t *coef, float *cf, char **av)
 int torus(int ac, char **av)
 {
     float *cf = malloc(5 * sizeof(float));
-    coef_t *coef = malloc(5 * sizeof(float));
+    coef_t *coef = malloc(7 * sizeof(float));
 
     if (error_handling(ac, av) == 1) {
         free(cf);

@@ -21,7 +21,7 @@ typedef struct coef
     float a3;
     float a4;
     float a5;
-    int prec;
+    float prec;
 } coef_t;
 
 int torus(int ac, char **av);
