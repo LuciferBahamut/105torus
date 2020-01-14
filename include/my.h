@@ -8,6 +8,9 @@
 #ifndef MY_H_
 #define MY_H_
 
+#define SUCCES 0
+#define ERROR 84
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>

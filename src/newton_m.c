@@ -9,5 +9,5 @@
 
 int newton_m(coef_t *coef)
 {
-    return (0);
+    return (SUCCES);
 }

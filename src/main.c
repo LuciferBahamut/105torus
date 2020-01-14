@@ -9,7 +9,7 @@
 
 int main(int ac, char **av)
 {
-    if (torus(ac, av) == 84)
-        return (84);
-    return (0);
+    if (torus(ac, av) == ERROR)
+        return (ERROR);
+    return (SUCCES);
 }
