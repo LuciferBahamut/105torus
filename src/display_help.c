@@ -18,5 +18,5 @@ void display_help(void)
     printf("    \t\t    3 for secant equation\n");
     printf("    a[0-4]\tcoefficients of the equation\n");
     printf("    n\t\tprecision (the application of the polynomial) ");
-    printf("to the soluiton should be smaller than 10^-n)\n");
+    printf("to the solution should be smaller than 10^-n)\n");
 }
