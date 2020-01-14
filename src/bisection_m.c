@@ -9,5 +9,6 @@
 
 int bisection_m(coef_t *coef)
 {
-    return (0);
+    
+    
 }

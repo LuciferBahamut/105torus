@@ -7,13 +7,14 @@
 
 NAME	=	105torus
 
-SRC	=	src/main.c \
-		src/torus.c \
-		src/error_handling.c \
-		src/display_help.c \
-		src/bisection_m.c \
-		src/newton_m.c \
-		src/secant_m.c
+SRC	=	src/main.c		\
+		src/torus.c		\
+		src/error_handling.c	\
+		src/display_help.c	\
+		src/bisection_m.c	\
+		src/newton_m.c		\
+		src/secant_m.c		\
+		src/function.c
 
 CC	=	gcc
 

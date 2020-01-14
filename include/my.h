@@ -16,11 +16,11 @@
 typedef struct coef
 {
     int opt;
+    float a0;
     float a1;
     float a2;
     float a3;
     float a4;
-    float a5;
     float prec;
 } coef_t;
 
