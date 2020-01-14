@@ -8,7 +8,7 @@
 #ifndef MY_H_
 #define MY_H_
 
-#define SUCCES 0
+#define SUCCESS 0
 #define ERROR 84
 
 #include <math.h>
@@ -25,6 +25,9 @@ typedef struct coef
     float a3;
     float a4;
     float prec;
+    float x;
+    float a;
+    float b;
 } coef_t;
 
 int torus(int ac, char **av);

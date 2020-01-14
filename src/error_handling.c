@@ -10,7 +10,7 @@
 int error_handling(int ac, char **av)
 {
     if (ac == 2 && av[1][0] == '-' && av[1][1] == 'h')
-        return (SUCCES);
+        return (SUCCESS);
     if (ac != 8)
         return (ERROR);
     for (int i = 1; i != ac; i++)
@@ -24,5 +24,5 @@ int error_handling(int ac, char **av)
         return (ERROR);
     if (av[7][0] == '-')
         return (ERROR);
-    return (SUCCES);
+    return (SUCCESS);
 }

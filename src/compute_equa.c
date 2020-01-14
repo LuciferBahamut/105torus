@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2020
-** function
+** equa
 ** File description:
-** that allow me to use additionnal functions without using libs
+** 105
 */
 
 #include "my.h"

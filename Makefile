@@ -14,7 +14,7 @@ SRC	=	src/main.c		\
 		src/bisection_m.c	\
 		src/newton_m.c		\
 		src/secant_m.c		\
-		src/function.c
+		src/compute_equa.c
 
 CC	=	gcc
 

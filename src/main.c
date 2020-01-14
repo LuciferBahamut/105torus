@@ -11,5 +11,5 @@ int main(int ac, char **av)
 {
     if (torus(ac, av) == ERROR)
         return (ERROR);
-    return (SUCCES);
+    return (SUCCESS);
 }
