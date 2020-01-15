@@ -22,7 +22,7 @@ static int exit_f(coef_t *coef, bisec_t *bis)
 
 int bisection_m(coef_t *coef, bisec_t *bis, int i)
 {
-    bis->n = coef->prec * -1;
+    bis->n = coef->prec * - 1;
     bis->n = pow(10, bis->n);
     coef->x = (coef->a + coef->b) / 2;
     bis->rslt_x = equa(coef, coef->x);
@@ -34,7 +34,7 @@ int bisection_m(coef_t *coef, bisec_t *bis, int i)
         coef->a = coef->x;
     if (bis->temp < 0)
         coef->b = coef->x;
-    if (i == 7)
+    if (i == coef->prec + 1)
         i--;
     printf("x = %.*f\n", i, coef->x);
     i++;
