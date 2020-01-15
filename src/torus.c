@@ -9,14 +9,17 @@
 
 void check_opt(coef_t *coef)
 {
+    bisec_t *bis = malloc(5 * sizeof(float));
+
     switch(coef->opt) {
-    case 1 : bisection_m(coef);
+    case 1 : bisection_m(coef, bis, 1);
         break;
     case 2 : newton_m(coef);
         break;
     case 3 : secant_m(coef);
         break;
     }
+    free(bis);
 }
 
 coef_t *fill_struct(coef_t *coef, float *cf, char **av)
@@ -28,7 +31,6 @@ coef_t *fill_struct(coef_t *coef, float *cf, char **av)
     coef->a3 = cf[3];
     coef->a4 = cf[4];
     coef->prec = atoi(av[7]);
-    coef->x = 0.5;
     coef->a = 0;
     coef->b = 1;
     free(cf);

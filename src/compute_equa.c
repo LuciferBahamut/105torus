@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-float Fvalue(coef_t *arg, float x)
+float equa(coef_t *arg, float x)
 {
     float value = 0;
 
@@ -19,7 +19,7 @@ float Fvalue(coef_t *arg, float x)
     return (value);
 }
 
-float FPrimevalue(coef_t *arg, float x)
+float dev_equa(coef_t *arg, float x)
 {
     float value = 0;
 
