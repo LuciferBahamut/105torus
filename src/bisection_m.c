@@ -9,15 +9,19 @@
 
 static int exit_f(coef_t *coef, bisec_t *bis)
 {
-    if (equa(coef, coef->a) == 0)
+    if (equa(coef, coef->a) == 0) {
         printf("x = %.*f\n", coef->prec, coef->a);
-    else if (equa(coef, coef->b) == 0)
+        return (SUCCESS);
+    }
+    if (equa(coef, coef->b) == 0) {
         printf("x = %.*f\n", coef->prec, coef->b);
-    else if (bis->rslt_x <= bis->n && bis->rslt_x > 0)
+        return (SUCCESS);
+    }
+    if (bis->rslt_x <= bis->n && bis->rslt_x > 0) {
         printf("x = %.*f\n", coef->prec, coef->x);
-    else
-        return (CONTINUE);
-    return (SUCCESS);
+        return (SUCCESS);
+    }
+    return (CONTINUE);
 }
 
 int bisection_m(coef_t *coef, bisec_t *bis, int i)
