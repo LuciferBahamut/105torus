@@ -9,7 +9,7 @@
 
 void check_opt(coef_t *coef)
 {
-    bisec_t *bis = malloc(5 * sizeof(float));
+    bisec_t *bis = malloc(5 * sizeof(double));
 
     switch(coef->opt) {
     case 1 : bisection_m(coef, bis, 1);
@@ -22,7 +22,7 @@ void check_opt(coef_t *coef)
     free(bis);
 }
 
-coef_t *fill_struct(coef_t *coef, float *cf, char **av)
+coef_t *fill_struct(coef_t *coef, double *cf, char **av)
 {
     coef->opt = atoi(av[1]);
     coef->a0 = cf[0];
@@ -39,8 +39,8 @@ coef_t *fill_struct(coef_t *coef, float *cf, char **av)
 
 int torus(int ac, char **av)
 {
-    float *cf = malloc(5 * sizeof(float));
-    coef_t *coef = malloc(10 * sizeof(float));
+    double *cf = malloc(5 * sizeof(double));
+    coef_t *coef = malloc(10 * sizeof(double));
 
     if (error_handling(ac, av) == 1) {
         free(cf);

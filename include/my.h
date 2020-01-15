@@ -20,23 +20,23 @@
 typedef struct coef
 {
     int opt;
-    float a0;
-    float a1;
-    float a2;
-    float a3;
-    float a4;
+    double a0;
+    double a1;
+    double a2;
+    double a3;
+    double a4;
     int prec;
-    float x;
-    float a;
-    float b;
+    double x;
+    double a;
+    double b;
 } coef_t;
 
 typedef struct bisection
 {
-    float rslt_x;
-    float rslt_a;
-    float temp;
-    float n;
+    double rslt_x;
+    double rslt_a;
+    double temp;
+    double n;
 } bisec_t;
 
 int torus(int ac, char **av);
@@ -45,7 +45,7 @@ int error_handling(int ac, char **av);
 int bisection_m(coef_t *coef, bisec_t *bis, int i);
 int newton_m(coef_t *coef);
 int secant_m(coef_t *coef);
-float equa(coef_t *arg, float x);
-float dev_equa(coef_t *arg, float x);
+double equa(coef_t *arg, double x);
+double dev_equa(coef_t *arg, double x);
 
 #endif

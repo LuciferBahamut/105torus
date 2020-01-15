@@ -7,9 +7,9 @@
 
 #include "my.h"
 
-float equa(coef_t *arg, float x)
+double equa(coef_t *arg, double x)
 {
-    float value = 0;
+    double value = 0;
 
     value += (pow(x, 4) * arg->a4);
     value += (pow(x, 3) * arg->a3);
@@ -19,9 +19,9 @@ float equa(coef_t *arg, float x)
     return (value);
 }
 
-float dev_equa(coef_t *arg, float x)
+double dev_equa(coef_t *arg, double x)
 {
-    float value = 0;
+    double value = 0;
 
     value += (pow(x, 3) * 4 * arg->a4);
     value += (pow(x, 2) * 3 * arg->a3);
