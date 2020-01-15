@@ -14,7 +14,7 @@ void check_opt(coef_t *coef)
     switch(coef->opt) {
     case 1 : bisection_m(coef, bis, 1);
         break;
-    case 2 : newton_m(coef);
+    case 2 : newton_m(coef, 0.5);
         break;
     case 3 : secant_m(coef);
         break;

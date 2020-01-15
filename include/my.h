@@ -43,7 +43,7 @@ int torus(int ac, char **av);
 void display_help(void);
 int error_handling(int ac, char **av);
 int bisection_m(coef_t *coef, bisec_t *bis, int i);
-int newton_m(coef_t *coef);
+int newton_m(coef_t *coef, double x);
 int secant_m(coef_t *coef);
 double equa(coef_t *arg, double x);
 double dev_equa(coef_t *arg, double x);
