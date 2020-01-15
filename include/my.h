@@ -39,12 +39,22 @@ typedef struct bisection
     double n;
 } bisec_t;
 
+typedef struct secant
+{
+    double x0;
+    double x1;
+    double x2;
+    double num;
+    double denum;
+    double n;
+} sec_t;
+
 int torus(int ac, char **av);
 void display_help(void);
 int error_handling(int ac, char **av);
 int bisection_m(coef_t *coef, bisec_t *bis, int i);
 int newton_m(coef_t *coef, double x);
-int secant_m(coef_t *coef);
+int secant_m(coef_t *coef, sec_t *sec, int i);
 double equa(coef_t *arg, double x);
 double dev_equa(coef_t *arg, double x);
 

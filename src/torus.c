@@ -7,19 +7,25 @@
 
 #include "my.h"
 
-void check_opt(coef_t *coef)
+int check_opt(coef_t *coef)
 {
     bisec_t *bis = malloc(5 * sizeof(double));
+    sec_t *sec = malloc(6 * sizeof(double));
 
     switch(coef->opt) {
     case 1 : bisection_m(coef, bis, 1);
         break;
     case 2 : newton_m(coef, 0.5);
         break;
-    case 3 : secant_m(coef);
+    case 3 : sec->x0 = coef->a;
+        sec->x1 = coef->b;
+        if (secant_m(coef, sec, 1) == ERROR)
+            return (ERROR);
         break;
     }
     free(bis);
+    free(sec);
+    return (SUCCESS);
 }
 
 coef_t *fill_struct(coef_t *coef, double *cf, char **av)
@@ -53,7 +59,8 @@ int torus(int ac, char **av)
     for (int i = 0, j = 2; j != ac - 1; i++, j++)
         cf[i] = atof(av[j]);
     coef = fill_struct(coef, cf, av);
-    check_opt(coef);
+    if (check_opt(coef) == ERROR)
+        return (ERROR);
     free(coef);
     return (SUCCESS);
 }

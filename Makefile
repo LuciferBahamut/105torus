@@ -31,7 +31,6 @@ clean	:
 		rm -f $(OBJ)
 
 fclean	:	clean
-		clear
 		rm -f $(NAME)
 		rm -f *#
 		rm -f *~
