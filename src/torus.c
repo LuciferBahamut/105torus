@@ -25,7 +25,6 @@ int check_opt(coef_t *coef)
     }
     free(bis);
     free(sec);
-    free(coef);
     return (SUCCESS);
 }
 
@@ -51,6 +50,7 @@ int torus(int ac, char **av)
 
     if (error_handling(ac, av) == ERROR) {
         free(cf);
+        free(coef);
         return (ERROR);
     }
     if (av[1][0] == '-' && av[1][1] == 'h') {
