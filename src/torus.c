@@ -48,7 +48,7 @@ int torus(int ac, char **av)
     double *cf = malloc(5 * sizeof(double));
     coef_t *coef = malloc(10 * sizeof(double));
 
-    if (error_handling(ac, av) == 1) {
+    if (error_handling(ac, av) == ERROR) {
         free(cf);
         return (ERROR);
     }
