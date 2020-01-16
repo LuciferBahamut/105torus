@@ -12,6 +12,8 @@ int newton_m(coef_t *coef, double x)
     double xplus1;
     double fxplus1;
 
+    if (dev_equa(coef, x) == 0)
+        return (ERROR);
     xplus1 = x - (equa(coef, x) / dev_equa(coef, x));
     if (x != 0.5)
         printf("x = %.*f\n", coef->prec, x);
