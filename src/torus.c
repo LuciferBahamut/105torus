@@ -25,6 +25,7 @@ int check_opt(coef_t *coef)
     }
     free(bis);
     free(sec);
+    free(coef);
     return (SUCCESS);
 }
 

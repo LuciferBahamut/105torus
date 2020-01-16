@@ -22,7 +22,7 @@ int newton_m(coef_t *coef, double x)
         fxplus1 *= -1;
     if (fxplus1 <= pow(10, (coef->prec) * -1)) {
         printf("x = %.*f\n", coef->prec, xplus1);
-        return(SUCCESS);
+        return (SUCCESS);
     }
     else
         newton_m(coef, xplus1);
