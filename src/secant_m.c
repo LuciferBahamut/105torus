@@ -25,6 +25,8 @@ int secant_m(coef_t *coef, sec_t *sec, int i)
     if (i % 2 == 0)
         sec->x1 = sec->x2;
     i++;
+    if (i == 10000)
+        return (SUCCESS);
     if ((sec->x0 - sec->x1) <= sec->n && (sec->x0 - sec->x1) > 0)
         return(SUCCESS);
     else

@@ -24,7 +24,7 @@ static int exit_f(coef_t *coef, bisec_t *bis)
     return (CONTINUE);
 }
 
-int bisection_m(coef_t *coef, bisec_t *bis, int i)
+int bisection_m(coef_t *coef, bisec_t *bis, int i, int j)
 {
     bis->n = coef->prec * - 1;
     bis->n = pow(10, bis->n);
@@ -42,6 +42,9 @@ int bisection_m(coef_t *coef, bisec_t *bis, int i)
         i--;
     printf("x = %.*f\n", i, coef->x);
     i++;
-    bisection_m(coef, bis, i);
+    j++;
+    if (j == 10000)
+        return (SUCCESS);
+    bisection_m(coef, bis, i, j);
     return (SUCCESS);
 }

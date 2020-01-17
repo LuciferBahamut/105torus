@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int newton_m(coef_t *coef, double x)
+int newton_m(coef_t *coef, double x, int j)
 {
     double xplus1;
     double fxplus1;
@@ -26,7 +26,11 @@ int newton_m(coef_t *coef, double x)
         printf("x = %.*f\n", coef->prec, xplus1);
         return (SUCCESS);
     }
-    else
-        newton_m(coef, xplus1);
+    else {
+        j++;
+        if (j == 10000)
+            return (SUCCESS);
+        newton_m(coef, xplus1, j);
+    }
     return (SUCCESS);
 }

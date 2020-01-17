@@ -13,9 +13,9 @@ int check_opt(coef_t *coef)
     sec_t *sec = malloc(6 * sizeof(double));
 
     switch(coef->opt) {
-    case 1 : bisection_m(coef, bis, 1);
+    case 1 : bisection_m(coef, bis, 1, 1);
         break;
-    case 2 : newton_m(coef, 0.5);
+    case 2 : newton_m(coef, 0.5, 1);
         break;
     case 3 : sec->x0 = coef->a;
         sec->x1 = coef->b;
