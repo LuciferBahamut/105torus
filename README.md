@@ -1,5 +1,5 @@
 <h1>105torus</h1>
-<h3>{EPITECH} -- First year -- first maths project</h3>
+<h3>{EPITECH} -- First year -- Semester 1 -- first maths project</h3>
 
 <p>1st semester Maths unit : Grade A</p>
 
