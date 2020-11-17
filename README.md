@@ -1,24 +1,18 @@
-# 105torus
-{EPITECH} -- First year -- first maths project
+<h1>105torus</h1>
+<h3>{EPITECH} -- First year -- first maths project</h3>
 
-1st semester Maths unit : Grade A
+<p>1st semester Maths unit : Grade A</p>
 
-105torus_2019 -- Without Crash
+<p>105torus_2019 -- Without Crash<p>
 
-Result : 82,9 %
+<p>Result : 82,9 %</p>
+  <li>Rigor : 100 % -- 10 / 10</li>
+  <li>Basic : 100 % -- 3 / 3</li>
+  <li>Option 1 : 100 % -- 6 / 6</li>
+  <li>Option 2 : 100 % -- 6 / 6</li>
+  <li>Option 3 : 50 % -- 3 / 6</li>
+  <li>Mathematical Rigor : 25 % -- 1 / 4</li>
+  <p></p>
+<p>Beware of -42 for Epitech Students</p>
 
-  - Rigor : 100 % -- 10 / 10
-  
-  - Basic : 100 % -- 3 / 3
-  
-  - Option 1 : 100 % -- 6 / 6
-  
-  - Option 2 : 100 % -- 6 / 6
-  
-  - Option 3 : 50 % -- 3 / 6
-  
-  - Mathematical Rigor : 25 % -- 1 / 4
-  
-Beware of -42 for Epitech Students
-
-[Group] Made with Archibald Roulet
+<p>[Group] Made with Archibald Roulet</p>
