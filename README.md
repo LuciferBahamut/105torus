@@ -3,7 +3,7 @@
 
 <p>1st semester Maths unit : Grade A</p>
 
-<p>105torus_2019 -- Without Crash<p>
+<p>105torus -- Without Crash<p>
 
 <p>Result : 82,9 %</p>
   <li>Rigor : 100 % -- 10 / 10</li>
